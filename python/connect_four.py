@@ -1,4 +1,3 @@
-DEBUG = False
 SPACE = '-'
 MARKER1 = "x"
 MARKER2 = "o"
@@ -129,12 +128,8 @@ def getPlacement():
 
 
 def setup():
-    if(DEBUG):
-        initializeBoard(4)
-        initializeRows()
-    else:
-        initializeBoard(getSizeOfBoard())
-        initializeRows()
+    initializeBoard(getSizeOfBoard())
+    initializeRows()
 
 
 def run():
