@@ -54,17 +54,18 @@ def toString(charArray):
     return "".join(charArray)
 
 def main():
+    dictionary = parseWords()
     tries = 0
     OPPORTUNITIES = 10
-    word = getRandomWord(parseWords)
+    word = getRandomWord(dictionary)
     failed = []
     actual = toCharArray(word)
     hidden = toHiddenWord(word)
     while(len(set(failed)) < OPPORTUNITIES):
+        print("Word: ", hidden)
         char = input("Please input a character to try: ")
         setChar(char, actual, hidden, failed)
         tries += 1
-        print("Word: ", hidden)
         if(compareStrings(actual, hidden)):
           print("You got it in", tries)
           print("You missed", len(failed), "letters!")

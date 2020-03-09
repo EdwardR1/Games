@@ -10,7 +10,7 @@ import java.nio.file.Path;
 public class Driver {
 
 	private static String parseFile() throws IOException {
-		return Files.readString(Paths.get("java/hangman/words.txt"), StandardCharsets.UTF_8);
+		return Files.readString(Paths.get("./words.csv"), StandardCharsets.UTF_8);
 	}
 	// java/hangman/words.txt
 
