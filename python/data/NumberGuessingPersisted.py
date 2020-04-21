@@ -45,7 +45,7 @@ def interactive():
   print("Well done! You solved it in", counter, "times!")
   appendToFile(limit, value, counter, "counts.txt")
 
-# interactive()
+interactive()
 
 
 def binarySearch(value, low, high, counter = 1):
@@ -70,5 +70,5 @@ def automated_main():
   limits = [f for f in range(50, 10001, 50)]
   for lim in limits:
     automated(lim)
-
-automated_main()
+# 
+# automated_main()

@@ -38,8 +38,8 @@ def draw(x, y, marker):
 
 def getPositions():
 	try:
-		x = int(input("Please input an x coordinate: "))
-		y = int(input("Please input a y coordinate: "))
+		x = int(input("Please input a row coordinate: "))
+		y = int(input("Please input a column coordinate: "))
 		return (x, y)
 	except ValueError:
 		print("Invalid positions!")
@@ -81,13 +81,11 @@ def hasDiagonalWin(players):
 	return False
 
 
-def canStillPlay():
-	for i in range(3):
-		for j in range(3):
-			if(board[i][j] == "-"):
-				return True
-	return False
-
+def canStillPlay():  
+  for i in range(3):
+    if("-" in board[i]):
+      return True
+  return False
 
 def stillPlaying():
 	if(hasDiagonalWin(players) == False and hasVerticalWin(players) == False and hasHorizontalWin(players) == False and canStillPlay()):

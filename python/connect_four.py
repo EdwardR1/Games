@@ -1,6 +1,6 @@
 SPACE = '-'
-MARKER1 = "x"
-MARKER2 = "o"
+MARKER1 = "X"
+MARKER2 = "O"
 board = []
 rows = []
 
